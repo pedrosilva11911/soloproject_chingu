@@ -13,7 +13,7 @@ const db = openDatabase(dbPath);
 const app = createApp(db, { staticDir });
 const port = Number(process.env.PORT) || 3001;
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   const where = staticDir ? 'API and board' : 'API';
-  console.log(`${where} listening on http://127.0.0.1:${port}`);
+  console.log(`${where} listening on port ${port}`);
 });

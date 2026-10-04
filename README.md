@@ -39,6 +39,14 @@ npm start
 
 Then open http://127.0.0.1:3001.
 
+## Deploy
+
+The app does not use accounts, so a host does not need a test login.
+
+Netlify, Vercel, and GitHub Pages serve the web page only. This project also needs the Node API and the SQLite file, so use a host that runs a web service, such as Render or Railway.
+
+On Render, the repo includes `render.yaml`. The build command installs dependencies and builds the board. The start command serves the board and the API on the host's port. The free service sleeps after a period with no visitors, and the task list is cleared when the service restarts.
+
 Tasks are stored in `backend/data/tasks.db`. Delete that file to start over.
 
 ## API
